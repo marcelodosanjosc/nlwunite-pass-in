@@ -1,2 +1,6 @@
 /*C12*/SET SCHEMA PUBLIC
 SET SCHEMA "PUBLIC"
+INSERT INTO EVENTS VALUES('abc3b1ff-519b-4dc6-a804-c547a80f1f1a','JAVA 3,0','Aprenda varias tecnologias de forma Gratuita!','java-30',1)
+COMMIT
+INSERT INTO ATTENDEES VALUES('7c7f3320-7385-48c9-92e7-80110ce532fc','Marcos Lopes','teste2@gamil.com','abc3b1ff-519b-4dc6-a804-c547a80f1f1a','2024-04-22 20:47:04.828223')
+COMMIT

@@ -1,6 +1,8 @@
 package marcelocaldasdevops.com.passin.controllers;
 
 import lombok.RequiredArgsConstructor;
+import marcelocaldasdevops.com.passin.dto.attendee.AttendeeIdDTO;
+import marcelocaldasdevops.com.passin.dto.attendee.AttendeeRequestDTO;
 import marcelocaldasdevops.com.passin.dto.attendee.AttendeesListReponseDTO;
 import marcelocaldasdevops.com.passin.dto.event.EventIdDTO;
 import marcelocaldasdevops.com.passin.dto.event.EventRequestDTO;
@@ -27,6 +29,12 @@ public class EventController {
         EventIdDTO eventIdDTO = this.eventService.createEvent(body);
         var uri = uriComponentsBuilder.path("/events/{id}").buildAndExpand(eventIdDTO.eventId()).toUri();
         return ResponseEntity.created(uri).body(eventIdDTO);
+    }
+    @PostMapping("/{eventId}/attendees")
+    public ResponseEntity<AttendeeIdDTO> registerParticipant(@PathVariable String eventId, @RequestBody AttendeeRequestDTO body, UriComponentsBuilder uriComponentsBuilder){
+        AttendeeIdDTO attendeeIdDTO = this.eventService.registerAttendeeOnEvent(eventId, body);
+        var uri = uriComponentsBuilder.path("/attendees/{attendeeid}/badge").buildAndExpand(attendeeIdDTO.attendeeId()).toUri();
+        return ResponseEntity.created(uri).body(attendeeIdDTO);
     }
     @GetMapping("/attendees/{id}")
     public ResponseEntity<AttendeesListReponseDTO> getEventAttendees(@PathVariable String id){
