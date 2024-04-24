@@ -29,7 +29,7 @@ SET FILES NIO TRUE
 SET FILES NIO SIZE 256
 SET FILES LOG TRUE
 SET FILES LOG SIZE 50
-SET FILES CHECK 622
+SET FILES CHECK 1132
 SET DATABASE COLLATION "SQL_TEXT" PAD SPACE
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
@@ -60,8 +60,10 @@ INSERT INTO "flyway_schema_history" VALUES(3,'3','create-table-checkins','SQL','
 INSERT INTO "flyway_schema_history" VALUES(4,'4','create-indexes','SQL','V4__create-indexes.sql',-826295296,'SA','2024-04-03 09:57:11.432178',1,'1')
 INSERT INTO EVENTS VALUES('5c163261-c2c1-418d-950a-906697548693','MarceloCaldasDevOps NLW Unite','Aprenda varias tecnologias de forma Gratuita!','marcelocaldasdevops-nlw-unite',100)
 INSERT INTO EVENTS VALUES('7aa42179-9b12-46fd-a258-5a74535b084c','MarceloCaldasDevOps NLW','Aprenda JAVA de forma Gratuita!','marcelocaldasdevops-nlw',50)
+INSERT INTO EVENTS VALUES('abc3b1ff-519b-4dc6-a804-c547a80f1f1a','JAVA 3,0','Aprenda varias tecnologias de forma Gratuita!','java-30',1)
 INSERT INTO EVENTS VALUES('ee2d2e2f-8bd3-4c91-928f-506d640a45d9','JAVA','Aprenda varias tecnologias de forma Gratuita!','java',1)
 INSERT INTO ATTENDEES VALUES('7aa42179-9b12-46fd-a258-5a74535b084c','Marcelo Caldas','marcelocaldas@devops.com','7aa42179-9b12-46fd-a258-5a74535b084c',NULL)
+INSERT INTO ATTENDEES VALUES('7c7f3320-7385-48c9-92e7-80110ce532fc','Marcos Lopes','teste2@gamil.com','abc3b1ff-519b-4dc6-a804-c547a80f1f1a','2024-04-22 20:47:04.828223')
 INSERT INTO ATTENDEES VALUES('e8c9d65f-6eae-4982-b3bc-88e1e372cb22','Denise Lopes','teste@gamil.com','7aa42179-9b12-46fd-a258-5a74535b084c','2024-04-22 19:26:30.344962')
 INSERT INTO ATTENDEES VALUES('fc30829b-7328-4728-a8f5-e839d7fd33ed','Murilo Lopes','teste@gamil.com','ee2d2e2f-8bd3-4c91-928f-506d640a45d9','2024-04-22 19:31:26.136412')
 INSERT INTO CHECK_INS VALUES(0,'2024-04-22 20:14:52.412970','e8c9d65f-6eae-4982-b3bc-88e1e372cb22')
